@@ -16,12 +16,19 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        verdictRed:
+          "rounded-full border border-wine/25 bg-surface/80 text-wine shadow-card hover:border-wine/60 hover:bg-wine/5",
+        verdictGreen:
+          "rounded-full border border-verdict/25 bg-surface/80 text-verdict shadow-card hover:border-verdict/60 hover:bg-verdict/5",
+        gold: "bg-gold text-gold-foreground shadow-seal hover:bg-gold/90",
+        salon: "border border-line bg-surface/75 text-foreground shadow-card hover:border-gold/50",
       },
       size: {
         default: "h-9 px-4 py-2",
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "h-10 rounded-md px-8",
         icon: "h-9 w-9",
+        verdict: "size-16 rounded-full p-0 [&_svg]:size-6",
       },
     },
     defaultVariants: {
