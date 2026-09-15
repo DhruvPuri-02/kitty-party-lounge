@@ -41,7 +41,7 @@ const traits = [
   { text: "I let my ex live in my studio — rent-free, ‘until she gets back on her feet.’ Two years now.", category: "Dating" },
   { text: "I read the group chat from notifications so nobody knows I have seen it.", category: "Friendship" },
   { text: "I schedule emails for 6:03 a.m. so everyone thinks I wake up early.", category: "Work" },
-];
+] as const;
 
 const navItems: Array<{ id: View; label: string; icon: typeof Flame }> = [
   { id: "swipe", label: "Swipe", icon: Flame },
@@ -61,7 +61,7 @@ function Index() {
   const [handle, setHandle] = useState("M. Halloway");
   const [editing, setEditing] = useState(false);
 
-  const trait = traits[traitIndex % traits.length];
+  const trait = traits[traitIndex % traits.length] ?? traits[0];
   const showToast = (message: string) => {
     setToast(message);
     window.setTimeout(() => setToast(""), 1800);
